@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Sử dụng vòng lặp while</title>
+</head>
+<body>
+<p> Bài 1: Viết chương trình nhận vào một số từ hộp thoại, việc nhập kết thúc khi người dùng nhập vào giá trị -1.
+    Mỗi giá trị nhập được sẽ được hiển thị ra và thực hiện tính tổng các giá trị đó. </p> <br>
+<p>Bài 2: Viết chương hình hiển thị thẻ
+    theo độ rộng từ 1 đến 100. Kết quả sẽ được hiển thị như hình
+</p>
+<button type="button" onclick="bai1()">Bài 1</button>
+<button type="button" onclick="bai2()">Bài 2</button>
+<p id="result1"></p>
+<p id="result2"></p>
+<script>
+    function bai1() {
+        let num = parseInt(prompt("Enter a number: ")); // Nhập số khác -1 để gọi 1 số
+        let total = 0;
+        while (num !== -1) {
+            num = parseInt(prompt("Enter a number: ")); // Nhập số để tính
+            alert(num);
+            total += num;
+        }
+        alert(total);
+
+
+    }
+
+    function bai2() {
+        let i = 1;
+        while (i<100){
+            //phân thân vòng lặp
+            document.write("<hr width = "+i+"%>");
+            i++;
+        }
+    }
+</script>
+</body>
+</html>
